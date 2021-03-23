@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores - parte 1</title>
+</head>
+<body>
+    <script>
+        /*
+        var nome = window.prompt('Digite o seu nome:')
+        var idade = Number.parseInt(window.prompt('Digite a sua idade:'))
+        document.write(`Olá <strong>${nome.toUpperCase()}</strong>, seja bem-vindo(a)!<br>`)
+        document.write(`Sua idade é ${idade >= 18?'maior':'menor'} que 18 anos`)
+        */
+        var n1 = Number.parseInt(window.prompt('Digite um número'))
+        var impar_ou_par = n1 % 2 == 0 ? 1 : 0
+        document.write(`${n1} é par: ${impar_ou_par == 1 ? true : false}`)
+    </script>
+</body>
+</html>

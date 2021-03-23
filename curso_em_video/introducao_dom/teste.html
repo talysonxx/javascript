@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciando com o DOM</title>
+    <style>
+        body {
+            background-color: rgba(121, 119, 119, 0.651);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 16px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1 name="titulo">Iniciando os estudos com o DOM</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic harum debitis eligendi culpa fuga doloremque enim, facere vel ad sit repudiandae rem sint. Nihil, fuga consequuntur deserunt sapiente qui eaque.</p>
+    <p>Bolsonaro Bolsonaro Bolsonaro Bolsonaro Bolsonaro Bolsonaro Bolsonaro Bolsonaro Bolsonaro Bolsonaro BolsonaroBolsonaro Bolsonaro Bolsonaro Bolsonaro Bolsonaro Bolsonaro Bolsonaro Bolsonaro Bolsonaro Bolsonaro Bolsonaro Bolsonaro Bolsonaro Bolsonaro Bolsonaro Bolsonaro</p>
+
+    <h1>Clique aqui</h1>
+
+    <div id="mensagem">Clique em mim</div>
+
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta exercitationem impedit amet, hic ratione porro recusandae tenetur quo quaerat repellendus praesentium quae odio laborum laudantium alias nisi blanditiis voluptate officiis?
+
+    <script>
+        // selecionando elementos por marca (getElementsByTagName())
+
+        window.document.write(window.document.charset)
+        window.document.write(window.document.URL)
+        document.write('<br>')
+        // pegue o primeiro elemento p e escrva o conteúdo dele no documento (innerText)
+        var p1 = window.document.getElementsByTagName('p')[0]
+        window.document.write('<strong>Réplica:</strong> ' + p1.innerText)
+
+        document.write('<br>')
+
+        var h1 = window.document.getElementsByTagName('h1')[1]
+        window.document.write(h1.innerText)
+        h1.style.color = 'black'
+
+        var corpo = window.document.body
+        corpo.style.background = 'brown'
+
+        // selecionando elementos por ID (getElementById())
+        document.write('<br>')
+        var d = window.document.getElementById('mensagem')
+        d.style.display = 'inline-block'
+        d.style.background = 'blue'
+
+        // selecionando elementos por name (getElementsByName())
+        var titulo = window.document.getElementsByName('titulo')[0].innerHTML
+
+        // getElementsByClasseName()
+
+        // por seletor querySelector() querySelectorAll()
+        var div = window.document.querySelector('div#mensagem')
+        d.style.background = 'green'
+    </script>
+</body>
+</html>
