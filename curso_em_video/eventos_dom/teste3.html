@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+    <style>
+        input {
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        h4 {
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tratando dados com JavaScript</h1>
+
+    <div id="formulario">
+        <input type="text" id="nome" placeholder="Digite o seu nome">
+        <input type="number" id="idade" placeholder="Digite a sua idade">
+        <input type="number" id="salário" placeholder="Digite o seu salário">
+        <input type="button" value="Calcular" onclick="clicar()">
+    </div>
+
+    <div id="resultado">
+        <h3>Resultado</h3>
+
+        <h4>Tem mais de 18 anos: <span id="idade_resposta">não informado</span></h4>
+        <h4>Salário em dólar: <span id="salário_dolar">não informado</span></h4>
+        <h4>Salário em euro: <span id="salário_euro">não informado</span></h4>
+        <h4>Salário em real: <span id="salário_real">não informado</span></h4>
+    </div>
+
+    <script>
+        var nome = window.document.getElementsByTagName('input')[0]
+        var idade = Number(window.document.getElementById('idade').value)
+        var salário = Number(window.document.querySelector('input#salário'))
+
+        function clicar() {
+            var resposta = idade >= 18 ? 1 : 0
+            window.document.querySelector('span#idade_resposta').innerHTML = `${idade == 1 ? true : false}`
+        }
+    </script>
+</body>
+</html>

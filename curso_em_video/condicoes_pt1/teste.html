@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condições PT1</title>
+</head>
+<body>
+    <h1>Sistema de multas</h1>
+    <label for="txt_velocidade">Velocidade do carro</label>
+    <input type="number" id="txt_velocidade"> km/h
+    <br>
+    <input type="button" value="Calcular" onclick="clicar()">
+    <h3 id="txt_vel"></h3>
+    <h3 id="multa"></h3>
+
+    <script>
+        /*var txt = window.document.querySelector('input#txt_velocidade')
+        var velocidade = Number(txt.value)
+        var calcular = window.document.getElementsByTagName('input')[1]
+        calcular.addEventListener('click', clicar)
+
+        function clicar() {
+            window.document.querySelector('h3#txt_vel').innerHTML = `Sua velocidade é de ${velocidade
+            }km/h`
+            if (velocidade > 80) {
+                document.querySelector('h3#multa').innerHTML = 'multado'
+            } else {
+                document.getElementById('multa').innerHTML = 'de boa'
+            }
+        }*/
+
+        function clicar() {
+            var velocidade = Number(window.document.querySelector('input#txt_velocidade').value)
+            //var velocidade = Number(txt_velocidade)
+            var resp = window.document.querySelector('h3#txt_vel')
+            resp.innerHTML = `<p>Sua velocidade foi de <strong>${velocidade} km/h</strong></p>`
+
+            if (velocidade > 80) {
+                window.document.querySelector('h3#multa').innerHTML = `Você foi multado!`
+            } else {
+                window.document.querySelector('h3#multa').innerHTML = `Tá de boa`
+                window.document.querySelector('h3#multa').innerHTML += `<p>Dirija com segurança!</p>`
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="nacionalidade" placeholder="Digite o país em que você nasceu" style="width: 210px; text-align: center;">
+
+        <input type="button" value="Verificar" id="botao">
+
+        <h3 style="font-weight: normal;">você é <span id="voce"></span></h3>
+    </div>
+
+    <script>
+        window.document.querySelector('input#botao').addEventListener('click', verificar)
+
+        function verificar() {
+            var nacionalidade = (String(window.document.querySelector('input#nacionalidade').value)).toLowerCase()
+            var texto = window.document.querySelector('span#voce')
+            
+            if (nacionalidade == 'br') {
+                texto.innerHTML = `<strong>brasileiro</strong>`
+            } else {
+                texto.innerHTML = `<strong>estrangeiro</strong>`
+            }
+        }
+    </script>
+</body>
+</html>

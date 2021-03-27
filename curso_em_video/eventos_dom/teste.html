@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area {
+            background-color: rgb(90, 90, 182);
+            font: normal 20pt arial;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- quando clicar na div, chame clicar() -->
+    <!-- onclick - quando clicar -->
+    <!-- onmouseover - quando o mouse entrar -->
+    <!-- onmouseout - quando o mouse sair -->
+    <!-- <div id="area" onclick="clicar()" onmouseover="mouse_entrar()" onmouseout="mouse_sair()"></div> -->
+    <div id="area">
+        Interaja...
+    </div>
+
+    <script>
+        var area = window.document.getElementById('area')
+
+        // fique pestresdando atenção nos eventos de area
+        area.addEventListener('click', clicar)
+        area.addEventListener('mouseover', mouse_entrar)
+        area.addEventListener('mouseout', mouse_sair)
+
+        function clicar() {
+            area.innerText = 'Clicou'
+            area.style.background = 'red'
+        }
+        function mouse_entrar() {
+            area.innerText = 'Entrou!'
+        }
+        function mouse_sair() {
+            area.innerText = 'Saiu!'
+            area.style.color = 'black'
+        }
+    </script>
+</body>
+</html>

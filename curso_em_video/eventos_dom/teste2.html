@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo prático</title>
+</head>
+<body>
+    <h1>Somando valores</h1>
+    <input type="number" id="txtn1"> + <input type="number" id="txtn2">
+    <input type="button" value="Somar" onclick="somar()">
+
+    <div id="resultado">Resultado</div>
+
+    <script>
+        var txtn1 = window.document.getElementById('txtn1')
+        var txtn2 = window.document.querySelector('input#txtn2')
+
+        function somar(){
+            var n1 = Number(txtn1.value)
+            var n2 = Number(txtn2.value)
+            var soma = n1 + n2
+            var resultado = window.document.getElementsByTagName('div')[0]
+
+            resultado.innerHTML = `A soma entre ${n1} e ${n2} é: ${soma.toFixed(2).replace('.', ',')}`
+        }
+    </script>
+</body>
+</html>
