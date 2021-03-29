@@ -15,10 +15,11 @@
     <section>
         <div id="formulario">
             <p>Ano de nascimento:
-                <input type="number" id="nascimento">
+                <input type="number" id="nascimento" placeholder="Aguardando" style="padding: 4px;">
             </p>
-            <p class="margin">Sexo:
-                <input type="radio" name="sexo" id="masculino" value="masculino" checked>
+            <p style="margin-top: 25px;"><span id="sexo">Sexo:</span>
+                <br>
+                <input type="radio" name="sexo" id="masculino" value="masculino" checked style="margin-top: 25px;">
                 <label for="masculino">Masculino</label>
                 <input type="radio" name="sexo" id="feminino" value="feminino">
                 <label for="feminino">Feminino</label>
@@ -28,12 +29,8 @@
                 <input type="button" value="Verificar" id="botao">
             </p>
         </div>
-        <div>
-            <p class="margin" id="resultado">
-                Preencha os dados acima para vê-los
-            </p>
-
-            <img src="_imagens/bolsonaro.jpg" id="imagem" alt="" width="250" height="250" style="border-radius: 50%; margin-top: 20px;">
+        <div id="resultado">
+            Preencha os dados acima para vê-los
         </div>
     </section>
 
