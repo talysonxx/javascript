@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #0E3A73;
+    font: normal 15pt arial;
+    color: white;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+section {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+    color: black;
+    box-shadow: 2px 2px 5px black;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    font-style: italic;
+}
+
+label, input {
+    display: block;
+    box-sizing: border-box;
+    padding: 2px;
+}
+
+label {
+    text-align: left;
+}
+
+input:focus {
+    outline: none;
+}
+
+.margin {
+    margin-bottom: 6px;
+}
+
+#botao {
+    margin-top: 15px;
+    width: 177px;
+    margin-bottom: 20px;
+}
+
+hr {
+    margin-bottom: 10px;
+}
