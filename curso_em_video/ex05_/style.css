@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0E3A73;
+    font: normal 15pt arial;
+    color: white;
+}
+
+header {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+section {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+    color: black;
+    box-shadow: 2px 2px 5px black;
+    overflow: auto;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-style: italic;
+}
+
+label, input {
+    display: block; 
+    padding: 2px;
+}
+
+label {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+input:focus {
+    outline: none;
+}
+
+select {
+    overflow: auto;
+}
