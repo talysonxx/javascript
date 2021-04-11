@@ -6,7 +6,6 @@ var flista = window.document.querySelector('select#flista')
 var array = []
 
 function adicionar() {
-    resultado.innerHTML = ''
     var número = Number(window.document.querySelector('input#fnum').value)
 
     if (número <= 0 || número > 100) {
@@ -23,8 +22,11 @@ function adicionar() {
                 option.id = número
 
             flista.appendChild(option)
+            resultado.innerHTML = ''
         }
     }
+    window.document.querySelector('input#fnum').value = ' ' // vai limpar o texto do input sempre que adicionar
+    window.document.querySelector('input#fnum').focus() // vai focar no input sempre que clicar em adicionar
 }
 
 var numTodos = 0
@@ -61,4 +63,5 @@ function cadastrar() {
         resultado.innerHTML += `<br>O maior e menor valor foi, respectivamente, ${numMaior} e ${numMenor}`
         resultado.innerHTML += `<br>A média dos valores digitados é ${(numSoma / cont)}`
     }
+    window.document.querySelector('input#fnum').focus()
 }
