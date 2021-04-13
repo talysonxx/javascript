@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function somarArrays(numbers) {
+            var soma = 0
+            for (var número in numbers) {
+                soma += numbers[número]
+            }
+
+            return soma
+        }
+        
+        console.log(somarArrays([1, 2, 3, 4, 5, 6]))
+
+
+        // parâmetro rest em functions
+        function endereços(rua, bairro, numero, ...complementos) { // os parametros a mais vai ficar no array complementos
+            console.log(rua)
+            console.log(bairro)
+            console.log(numero)
+            console.log(complementos)
+        }
+
+        endereços('Duque de Caxias', 'Colorado', '26', 'CEP: 68456335', 'Frente ao Altas Horas')
+
+    
+        // funções que se auto executam
+        (function autoExecuta(presidente) {
+            console.log(presidente, 'presidente')
+        }('bolsonaro'))
+
+        var somarNumeros = function (a = 10, b = 10) { 
+            return a + b 
+        }
+
+        console.log(somarNumeros())
+
+
+        // função callback
+        function somarCallBack (a = 0, b = 0, fnCallBack) {
+            return fnCallBack(a + b)
+        }
+        console.log(somarCallBack(10, 20, function (total) { 
+            return total * 10 
+        }))
+    </script>
+</body>
+</html>
