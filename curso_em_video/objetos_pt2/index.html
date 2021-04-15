@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var novoUser = {
+            nome: 'Talyson',
+            idade: 27,
+            país: 'Brasil',
+            youtube: 'Bolsonaro Presidente 2022'
+        }
+        // forma tradicional
+        var nome = novoUser.nome
+        //var idade = novoUser.idade
+        var país = novoUser.país
+        
+        // forma nova
+        var {idade, nome, país} = novoUser
+        console.log(idade, nome, país)
+
+        // escolher o nome da variável em que guardará o valor
+        var {nome: primeiroNome} = novoUser
+        console.log(primeiroNome)
+        var {youtube: canal} = novoUser // quero que o valor da chave youtube seja armazenado na variável canal
+        console.log(canal)
+
+
+        var novoUser2 = {
+            nome: {
+                primeiro: 'Talyson André',
+                //último: 'Alves'
+            }
+        }
+        // método clássico
+        var primeiro = novoUser2.nome.primeiro
+        console.log(primeiro)
+
+        // método novo
+        // dentro de nome, extrai a propriedade primeiro, que está dentro do objeto novoUser2
+        var {nome: {primeiro}} = novoUser2
+        console.log(primeiro)
+
+        // definir um valor padrão, como por exemplos nas function (a = 0, b = 0)  { return a + b } 
+        var {nome: {último  = 'Alves'}} = novoUser2
+        console.log(último)
+
+
+        // extrair valores de uma função
+        function imprimirUser ({nome, idade, sexo, país = 'Japão'})  //(usuário) quero extrair somente o nome idade e sexo do objeto
+            {
+            console.log(nome)
+            console.log(idade)
+            console.log(sexo)
+            console.log(país)
+        }
+
+        var usuárioFunção = {
+            nome: 'Edivan',
+            idade: 37,
+            sexo: 'Masculino'    
+        }
+        imprimirUser(usuárioFunção)
+        </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos { }</title>
+</head>
+<body>
+    <script>
+        // getters e setters
+     var usuários = [
+            {
+                nome: 'Talyson',
+                idade: 18
+            },
+            {
+                nome: 'Edivan',
+                idade: 36
+            },
+            {
+                nome: 'Alcione',
+                idade: 35
+            }
+        ]
+        console.log(usuários[2].idade)
+
+        var usuário = {
+            posição: 0,
+            get atual() {
+                return usuários[this.posição]
+                // uso this para mencionar o próprio objeto
+                // para chamar uma função como se fosse uma propriedade, sem o (), use o método get quando é só pra ela retornar um valor, sem parâmetros
+            }, 
+            set atual (posição) {
+                this.posição = posição
+            },
+            próximo() {
+                ++this.posição
+            },
+            anterior() {
+                --this.posição
+            }
+        }
+        console.log(usuário.atual) // {nome: 'Talyson', idade: 18}
+        usuário.próximo()
+
+        console.log(usuário.atual) // {nome: 'Edivan', idade: 36}
+        usuário.próximo()
+
+        console.log(usuário.atual) // {nome: 'Alcione', idade: 35}
+
+        usuário.anterior()
+        console.log(usuário.atual) // {nome: 'Edivan', idade: 36}
+
+        usuário.atual = 0
+        console.log(usuário.atual) // {nome: 'Talyson', idade: 18}
+
+        usuário.atual = 2
+        console.log(usuário.atual) // {nome: 'Alcione', idade: 35}
+        </script>
+</body>
+</html>
