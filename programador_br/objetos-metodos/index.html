@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos - Métodos</title>
+</head>
+<body>
+    <script>
+        // se uma função pertence ao objeto, ela é o método daquele objeto
+        // function calcMedia(n1, n2) {
+        //         return (n1 + n2) / 2
+        //     }
+        function calcMedia() {
+            return (this.notas[0] + this.notas[1]) / 2 
+        }
+        var aluno = {
+            nome: 'Igor',
+            notas: [9, 8],
+            // como o método (função) faz parte do meu objeto, o this vai ser o próprio objeto
+            // media: calcMedia
+            media: calcMedia
+        }
+        var aluno2 = {
+            nome: 'João',
+            notas: [5, 8],
+            // media: calcMedia
+            media: calcMedia
+        } 
+        console.log(aluno)
+        console.log(aluno.media())
+        console.log(aluno2)
+        console.log(aluno2.media())
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // function calcMedia(){
+        //     return (this.notas[0] + this.notas[1]) / 2
+        // }
+
+        // var aluno = {
+        //     nome: 'Boruto',
+        //     notas: [10, 9],
+        //     media: calcMedia
+        // }
+        // console.log(aluno.nome, aluno.media())
+    </script>
+</body>
+</html>

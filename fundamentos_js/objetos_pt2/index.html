@@ -8,6 +8,8 @@
 </head>
 <body>
     <script>
+        // destruction
+
         var novoUser = {
             nome: 'Talyson',
             idade: 27,
@@ -65,6 +67,29 @@
             sexo: 'Masculino'    
         }
         imprimirUser(usuárioFunção)
+
+        console.log(Object.keys(usuárioFunção))
+        console.log(Object.values(usuárioFunção))
+
+        var props = Object.keys(usuárioFunção)
+        for (var i in props) {
+            //console.log(props[i])
+            //console.log(usuárioFunção[props[i]])
+            // usuárioFunção.nome depois .idade depois .sexo, mesma coisa
+        }
+
+        // o for in sobre o objeto entrega as keys
+        for (var propriedades in usuárioFunção) {
+            if (usuárioFunção.hasOwnProperty(propriedades)) {
+                console.log(usuárioFunção[propriedades])
+                // se propriedades for uma propriedade do objeto usuárioFunção imprima
+            }
+        }
+
+        // use o for of para retornar o valor de cada objeto do array
+        for (var objeto of props) {
+            console.log('teste' ,usuárioFunção[objeto])
+        }
         </script>
 </body>
 </html>

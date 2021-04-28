@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var array = [1, 10, 20, 30]
+        console.log(array)
+        console.log(array.pop(), array) // retira e retorna o último valor do array
+
+        console.log(array.join('/')) // junta os elementos de um array em um string, e você escolhe o separador
+
+        var userDate = [
+            'bolsonaro',
+            2018,
+            65
+        ]
+        userDate.push('presidente') // adiciona como último elemento no array
+        console.log(userDate)
+
+        console.log(userDate.includes('presidente')) // verifica se tal valor está no array
+        console.log(userDate.indexOf('bolsonaro') == -1 ? 'não encontrado' : 'encontado') // também pode ser usado
+
+        var array1 = [1, 2, 5]
+        var array2 = ['Bol', 'so', 'naro']
+        var array3 = array1.concat(array2).concat([0, 4, 'bolsonaro']) // juntando o array1 com o array2
+        console.log(array3)
+        var arrays1 = [1, 0, 2]
+        var arrays2 = ['bo', 'a']
+        console.log([...arrays1, ...arrays2]) // mesma coisa do concat só que mais rápido e simples
+
+        var dados = ['Júlia', 21, 'estudante', 1999]
+        // jeito antigo
+        /*var nome = dados[0]
+        var idade = dados[1]
+        var nascimento = dados[2]*/
+        var [nome, idade, ,nascimento] = dados // na posição 0, salve na variável nome e assim sucessivamente
+        console.log(nome, idade, nascimento)
+    </script>
+</body>
+</html>

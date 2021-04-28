@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testes</title>
+</head>
+<body>
+    <script>
+        // alterando o valor de this com o new
+        // console.log(this, window)
+        function User(){
+            // console.log(this)
+            this.nome = 'Lula'
+            this['data-de-nascimento'] = 2002
+            this.soma = (n1 = 0, n2 = 0) => n1 + n2
+            console.log(this.soma(10, 12))
+        }
+        // User()
+        // quando invoco uma function com new o this passa a ser o objeto daquela function
+        new User()
+        var user = new User()
+        console.log(user.nome)
+
+
+        // alterando o valor de this com o call
+        function Personagem(p1, p2) {
+            console.log(this)
+            console.log(p1)
+            console.log(p2)
+        }
+        // o primeiro parâmetro é qual o valor de this que eu quero retornar
+        Personagem.call({nome: 'Ayrton', idade: 19}, 'Bolsonaro', 19)
+
+
+        // alterando o this com o apply
+        // semelhante ao apply, o primeiro parâmetro é qual o valor de this eu quero passar
+        // os parâmetros tem que ser passados em array
+        Personagem.apply([10, 20,'Dvilla'], ['Lula', 19])
+
+
+
+        // alterando o valor de this com bind
+        // ele retorna um function, e não a envoca como os demais
+        console.log('--------------------')
+        var functionBind = Personagem.bind('String', 19)
+        console.log(functionBind('Olá'))
+    </script>
+</body>
+</html>

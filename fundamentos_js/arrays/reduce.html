@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Método Reduce</title>
+</head>
+<body>
+    <script>
+        // não retorna necessariamente um array. pode retornar um array, objeto, função, string
+        var soma = 0
+        const números = [1, 2, 3, 4, 5]
+        for (número of números) {
+            soma += número
+        }
+        console.log(soma)
+
+        const somaReduce = números.reduce((valorDaSoma, númeroArray) => valorDaSoma + númeroArray, 0)
+        console.log(somaReduce)
+
+        const pessoas = [
+            {nome: 'Ayrton', idade: 27}, 
+            {nome: 'João', idade: 14}, 
+            {nome: 'Maria', idade: 23}, 
+            {nome: 'Joana', idade: 23}, 
+            {nome: 'Lucas', idade: 32}, 
+            {nome: 'Mateus', idade: 15}, 
+            {nome: 'Isa', idade: 23},
+            {nome: 'Luiza', nome: 17}
+        ]
+        var pessoasAgrupadas = pessoas.reduce(function(valorAcumulador, valorArray) {
+            const propMaiorOuMenor = valorArray.idade >= 18 ? 'maiores' : 'menores'
+            valorAcumulador[propMaiorOuMenor].push(valorArray)
+            return valorAcumulador
+        }, {maiores: [], menores: []})
+        console.log(pessoasAgrupadas)
+    </script>
+</body>
+</html>

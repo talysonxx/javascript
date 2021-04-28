@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Método MAP</title>
+</head>
+<body>
+    <script>
+        // manipula um array, ele retorna outro array
+        const números = [10, 20, 30, 40]
+        let novoArray = []
+        for (número of números) {
+            novoArray.push(número * 2)
+        }
+        console.log(números, novoArray)
+
+        var dobroNúmeros = números.map(function(n) { 
+            return n * 2 
+        })
+        console.log('Usando map():', dobroNúmeros)
+
+        // com arrow function
+        const arrayMapArrow = números.map(n2 => n2 * 2)
+        console.log(arrayMapArrow, 'usei arrow functons')
+
+        const names = ['Lula', 'Bolosonaro', 'Joe Biden', 'Trump']
+        const namesLower = names.map(nomePresidente => nomePresidente.toLowerCase())
+        console.log(namesLower)
+    </script>
+</body>
+</html>
