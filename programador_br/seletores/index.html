@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header > p{
+            /* pega somente os p que tem como pai o header, logo os p dentro de section não são afetados */
+            color: blueviolet;
+        }
+        header + p{
+            /* pega o p que está logo após o fechamento da tag header, não pode ter elementos entre eles */
+            font-size: 1.2rem;
+            color: red;
+        }
+        header ~ p{
+            /* pega todos os p que sucedem o header */
+            color: teal;
+        }
+        [width="500"]{
+            background-color: green;
+        }
+        [title~="titulo"]{
+            /* pega todos os elementos em que o title tem titulo */
+            color: olivedrab;
+        }
+        [title^="ti"]{
+            /* todos os titles que começam com ti */
+            color: violet;
+        }
+        [title$="1"]{
+            /* pega todos os title que terminam com 1 */
+            color: brown;
+        }
+        [title*="t"]{
+            /* todos os title em que tiverem t não importa o lugar */
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia tempora dignissimos praesentium ipsam cupiditate impedit dolores. Mollitia repudiandae cupiditate aut deserunt consequatur eligendi ipsa. Architecto placeat atque quasi. Cum, rem!
+        </p>
+
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui repudiandae explicabo animi nemo sed dolore, ab ipsum quisquam nam! Iure vero obcaecati temporibus recusandae odit labore reprehenderit ad quisquam sapiente?
+        </p>
+
+        <section>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate harum necessitatibus laudantium labore! Perferendis labore impedit illo ipsum, cum quae, neque repellat beatae magnam rerum quidem assumenda minus fuga. Eveniet.</p>
+        </section>
+    </header>
+
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores voluptate, odit mollitia, adipisci cumque officiis quaerat corrupti facere quasi, nobis eveniet cupiditate delectus. Optio, cumque? Ducimus eaque ipsum eligendi delectus?
+    </p>
+    <h2 width=100>bah</h2>
+    <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam provident inventore, nesciunt recusandae ea deserunt voluptatem. Quis numquam, quasi, accusamus perferendis quod ut culpa quibusdam ducimus laboriosam asperiores, odio consequuntur.
+    </p>
+    <h4 width=500>bah</h4>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias quis nulla autem labore error quas, voluptatem a nihil aperiam nam esse ipsam debitis sapiente optio totam mollitia, dolorum ducimus cupiditate?
+    </p>
+
+    <section>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt dolorum nisi quod minima id. Vitae nobis, harum, enim eius sint temporibus molestias et dignissimos libero, nulla itaque praesentium recusandae repellendus?
+        </p>
+    </section>
+    <div>
+        <p title="titulo 1">titulo 1</p>
+        <p title="titulo 2">titulo 2</p>
+        <p title="texto">texto</p>
+    </div>
+
+    <script>
+        let titulo = window.document.querySelectorAll('[title*=tu]')
+        window.console.log(titulo)
+    </script>
+</body>
+</html>

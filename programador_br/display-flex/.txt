@@ -1,0 +1,13 @@
+elemento pai
+flex-direction: row-reverse;
+flex-wrap: wrap-reverse;
+flex-flow: row-reverse wrap-reverse;
+justify-content: center;
+align-items: center;
+align-content: center;
+
+elementos filhos
+flex-shrink: 0 ele não pode encolher para se adaptar; 1 pode se encolher para se adaptar
+flex-grow: 0 o elemento não pode aumentar de tamanho; 1 o elemento pode aumentar de tamanho; 2 tem o dobro do tamanho das outras
+order: -1, 2, 4
+align-self: center;

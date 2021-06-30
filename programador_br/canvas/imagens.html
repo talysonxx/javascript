@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- primeiro método -->
+    <!-- <img src="https://upload.wikimedia.org/wikipedia/pt/0/00/K-On.jpg" id="k-on" style="display: none;"> -->
+    <canvas id="tela" width="500" height="500"  style="background: red;"></canvas>
+    <script>
+        let tela = window.document.getElementById('tela')
+        let ctx = tela.getContext('2d')
+        // let img = window.document.getElementById('k-on')
+        // ctx.drawImage(img, 20, 20)
+        
+        // segundo método
+        let img = new Image()
+        img.src = 'https://upload.wikimedia.org/wikipedia/pt/0/00/K-On.jpg'
+        img.onload = carregarImg
+
+        function carregarImg(){
+            ctx.drawImage(this, 20, 20, this.naturalWidth/2, this.naturalHeight/2)
+        }
+    </script>
+</body>
+</html>

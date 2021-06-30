@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de sorteio</title>
+    <script>
+        window.onload = function(){
+            window.document.querySelector('input#sortear').addEventListener('click', sortear)
+            window.document.querySelector('input#numeroPessoas').addEventListener('input', atualizar)
+
+            let numero = window.document.querySelector('span#numero')
+            let spanPessoas = window.document.querySelector('span#pessoas')
+            let participantes = window.document.querySelector('span#participantes')
+            function atualizar(){
+                let numeroPessoas = window.document.querySelector('input#numeroPessoas').value
+                if(numeroPessoas != 0 && !isNaN(numeroPessoas)){
+                    participantes.innerHTML = Number.parseInt(numeroPessoas)
+                    spanPessoas.setAttribute('style', 'display: default')
+                    Number.parseInt(numeroPessoas) == 1 ? spanPessoas.textContent = 'pessoa' : spanPessoas.textContent = 'pessoas'
+                }else{
+                    participantes.innerHTML = 'digite um número'
+                    spanPessoas.setAttribute('style', 'display: none')
+                }
+            }
+            function sortear(){
+                let numeroPessoas = window.document.querySelector('input#numeroPessoas')
+                if(numeroPessoas.value == null || numeroPessoas.value == '' || numeroPessoas.value == 0){
+                    window.alert('Você precisa escolher a quantidade de pessoas para fazer o sorteio')
+                }else if (isNaN(numeroPessoas.value)){
+                    window.alert('Digite um número')
+                    numeroPessoas.value = ' '
+                    numero.innerHTML = 'ainda não sorteado'
+                    participantes.textContent = '0'
+                }else{
+                    let numeroSorteado = Math.round(Math.random() * Number.parseInt(numeroPessoas.value))
+                    numero.innerHTML = numeroSorteado
+
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <figure>
+        <img src="https://famousbirthdays.io/wp-content/uploads/2021/02/jamie-young.jpg" alt="" width="200px">
+        <figcaption>Jamie Young</figcaption>
+    </figure>
+
+    <h1>Número sorteado: <span id="numero">ainda não sorteado</span></h1>
+    <p>Número de pessoas participando: <span id="participantes">0</span> <span style="display: none;" id="pessoas"></span></p>
+    <label for="numeroPessoas">Digite o número de pessoas:</label>
+    <input type="text" id="numeroPessoas">
+    <input type="button" value="sortear" id="sortear">
+</body>
+</html>

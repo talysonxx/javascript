@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .paragrafo {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="titulo">Titulo</h1>
+    <p class="paragrafo">Parágrfo 1</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate at ipsum iusto odit labore similique velit officia animi, iste unde assumenda harum exercitationem nam veritatis. Soluta rerum sit id autem.</p>
+
+
+    <h2>Testando setatributos</h2>
+    <h2>Usando innerHTML</h2>    
+    <script>
+        let titulo = window.document.getElementById('titulo')
+        console.log(titulo)
+        // no innerText você só pode adicionar textos, não tags html
+        titulo.innerText = '<h2>titulo novo</h2>'
+        let paragrafo1 = window.document.getElementsByTagName('p')[0]
+        console.log(paragrafo1)
+        // o mesmo vale pra textContent
+        paragrafo1.textContent = '<h3>paragrafo novo</h3>'
+        paragrafo1.innerHTML = '<h1>Parágrafo com título</h1>'
+        console.log(paragrafo1)
+        let h1DoP = paragrafo1.getElementsByTagName('h1')[0]
+        h1DoP.setAttribute('id', 'titulo-do-parágrafo')
+        h1DoP.textContent = 'mudei de novo'
+        console.log(paragrafo1)
+        h1DoP.id = 'mudei kkkk'
+        console.log(paragrafo1)
+
+        // innerText mostra o texto que aparece, o textContent mostra o texto que aparece no HTML
+
+        paragrafo1.getAttribute('style') // cria um atributo, mesmo ele não existindo entre as tag HTML
+        console.log(paragrafo1)
+
+        // modificando style de duas formas
+       let primeiroH2 = window.document.getElementsByTagName('h2')[0]
+       let segundoH2 = window.document.getElementsByTagName('h2')[1]
+       primeiroH2.setAttribute('id', 'primeiroH2')
+       segundoH2.setAttribute('class', 'segundoH2')
+
+       primeiroH2.setAttribute('style', 'color: red; font-family: Arial; font-size: 10px')
+       segundoH2.style = 'font-size: 24px; border: 1px solid gray'
+       console.log(primeiroH2)
+       console.log(segundoH2)
+    </script>
+</body>
+</html>

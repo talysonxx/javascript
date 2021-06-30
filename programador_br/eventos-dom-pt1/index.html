@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 onclick="clicar()">Clique aqui</h1>
+
+    <h1 onclick="window.alert('Aee krai')">Clique</h1>
+
+    <h1 id="listen">testando addListen</h1>
+
+    <input id="input" type="text">
+
+    <input type="text" onchange="change2(this)">
+
+    <input type="text" oninput="h1listen.innerHTML = this.value">
+
+    <input type="text" oninput="console2(this)">
+    <textarea name="" id="" cols="30" rows="10" oninput="textarea(this)" onchange="limpar(this)"></textarea>
+     <p>
+         Escreva aqui:
+     </p>
+    <script>
+        let paragrafoTextArea = window.document.getElementsByTagName('p')[0]    
+        function textarea(textarea) {
+            paragrafoTextArea.innerHTML = textarea.value
+        }
+
+        function limpar(textarea) {
+            paragrafoTextArea.innerHTML = ''
+            textarea.value = ''
+        }
+        function clicar() {
+            window.document.getElementsByTagName('h1')[0].textContent = 'mudou'
+        }
+        var h1listen = window.document.querySelector('h1#listen')
+        h1listen.addEventListener('click', clicou)
+
+        function clicou() {
+            // window.confirm('tu és')
+            // window.alert('boas vindas')
+            window.console.log('Oioioioio')
+        }
+
+        let input = window.document.querySelector('input#input')
+        input.addEventListener('change', change)
+        function change() {
+            console.log(input.value)
+            h1listen.innerHTML = input.value
+        }
+
+        function change2(input) {
+            console.log(input)
+            window.alert(input.value)
+            input.value = ''
+        }
+
+        function console2(input) {
+            console.log(input.value)
+        }
+    </script>
+</body>
+</html>

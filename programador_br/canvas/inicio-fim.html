@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        canvas{
+            background-color: aqua;
+        }
+    </style>
+    <script>
+        window.onload =  function(){
+            let tela = window.document.getElementById('tela')
+            let contexto = tela.getContext("2d")
+
+            contexto.beginPath()
+            contexto.lineWidth = 5
+            contexto.strokeStyle = 'pink'
+            contexto.moveTo(10, 10)
+            contexto.lineTo(100, 200)
+            contexto.stroke()
+
+           contexto.beginPath()
+           contexto.lineWidth = 5
+           contexto.strokeStyle = 'blue'
+           contexto.moveTo(500, 0) /* declaro o ponto de partida inicial da linha*/
+           contexto.lineTo(0, 500) /* primeiro X depois Y, primeiro width depois height*/
+           contexto.lineTo(250, 0)
+           contexto.closePath()
+           contexto.fillStyle = 'brown'
+           contexto.stroke()
+           contexto.fill()
+
+           contexto.beginPath()
+           contexto.lineWidth = 2
+           contexto.strokeStyle = 'yellow'
+           contexto.moveTo(0, 200)
+           contexto.lineTo(0, 400)
+           contexto.lineTo(500, 400)
+           contexto.lineTo(500, 200)
+           contexto.closePath()
+           contexto.fillStyle = 'pink'
+           contexto.fill()
+           contexto.stroke()
+        }
+    </script>
+</head>
+<body>
+    <canvas id="tela" width="500px" height="500px"></canvas>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM - parte 3/3</title>
+    <script>
+        function load(){
+            let h1Titulo = window.document.querySelector('h1#titulo1')
+            h1Titulo.onclick = changeText1
+
+            window.document.querySelector('h1#titulo2').addEventListener('click', changeText2)
+        }
+
+        function changeText1() {
+            this.textContent = 'mudou! 1'
+        }
+
+        function changeText2() {
+            this.textContent = 'mudou! 2'
+        }
+    </script>
+</head>
+<body onload="load()">
+    <h1 id="titulo1">Teste 1</h1>
+
+    <h1 id="titulo2">Teste 2</h1>
+</body>
+</html>

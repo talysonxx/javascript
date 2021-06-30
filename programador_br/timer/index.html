@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // function mudarCor(){
+        //     window.document.getElementsByTagName('h1')[0].style.color = 'blue'
+        // }
+        // let interval
+        // function iniciar(){
+        //     window.document.getElementsByTagName('h1')[0].innerHTML = 'Novo título'
+
+        //     // window.setTimeout(function() {}, time))
+        //     window.setTimeout(mudarCor, 1000)
+            
+        //     interval = window.setInterval(mudarTexto, 1000)
+        // }
+        // function parar(){
+        //     clearInterval(interval)
+        // }
+
+        // let numero = 0
+        // function mudarTexto(){
+        //     let h1 = window.document.getElementsByTagName('h1')[0]
+        //     h1.innerHTML += ' ' + numero
+        //     ++numero
+        // }
+        let numero = 0
+        function mudarTexto(){
+            window.document.getElementsByTagName('h1')[0].innerHTML += ' ' + numero
+            ++numero
+        }
+        let intervalo
+        function iniciar(){
+            intervalo = window.setInterval(mudarTexto, 1000)
+        }
+        function parar(){
+            clearInterval(intervalo)
+        }
+    </script>
+</head>
+<body>
+    <h1>Título</h1>
+    <input type="submit" value="Iniciar" onclick="iniciar()">
+    <input type="submit" value="Parar" onclick="parar()">
+</body>
+</html>

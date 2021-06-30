@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRID</title>
+    <style>
+        .container{
+            color: white;
+            display: grid;
+            /* grid-template-rows: auto auto;
+            grid-template-columns: 1fr 3fr 1fr; */
+            /* fr = fração; 3fr = três vezes o tamanho das pontas */
+            grid-template: auto auto auto / 33.3% 33.3% auto;
+        }
+        .r1{
+            background-color: red;
+        }
+        .r2{
+            background-color: blue;
+        }
+        .r3{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="rect r1">1</div>
+        <div class="rect r2">2</div>
+        <div class="rect r3">3</div>
+        <div class="rect r1">4</div>
+        <div class="rect r2">5</div>
+        <div class="rect r3">6</div>
+    </div>
+</body>
+</html>

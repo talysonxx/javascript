@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // window.localStorage.setItem('nome', 'Bolsonaro')
+        // console.log(window.localStorage.getItem('nome'))
+        // window.localStorage.removeItem('nome')
+        // console.log(window.localStorage.getItem('nome'))
+        
+        window.onload = function(){
+            window.document.querySelector('h1#nome').innerHTML = window.localStorage.getItem('nome')
+            window.document.getElementsByTagName('input')[0].value = window.localStorage.getItem('nome')
+        } 
+        function escrever(input) {
+            window.document.querySelector('h1#nome').innerHTML = input.value
+            window.localStorage.setItem('nome', input.value)
+        }
+
+        let a = {
+            nome: 'Luíz',
+            number: 12
+        }
+        window.localStorage.setItem('aluno', JSON.stringify(a))
+        console.log(JSON.parse(window.localStorage.getItem('aluno')))
+
+        localStorage.removeItem('aluno')
+        console.log(JSON.parse(window.localStorage.getItem('aluno')))
+    </script>
+
+    <h1 id="nome"></h1>
+    <input type="text" oninput="escrever(this)">
+</body>
+</html>

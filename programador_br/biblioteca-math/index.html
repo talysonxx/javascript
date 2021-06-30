@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MATH</title>
+    <script>
+        window.onload = function(){
+            console.log(Math.PI.toFixed(2).replace('.', ','))
+            // random() gera um número aleatório entre 0 e 1
+            let n = Math.round(Math.random() * 10)
+            let cont = 1
+            let p = window.document.createElement('p')
+            while(n != 9){
+                p.innerHTML += `${cont}° => ${n}; `
+                window.document.body.appendChild(p)
+                let n1 = Math.random() * 10
+                console.log('número normal', n1)
+                console.log('arredondamento pra baixo', Math.floor(n1))
+                console.log('arredonda pra cima', Math.ceil(n1))
+                console.log('retorna o número pos a virgula', Math.trunc(n1))
+                n = Math.round(Math.random() * 10)
+                ++cont
+            }
+            console.log(`repetiu ${cont - 1} vezes`)
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>

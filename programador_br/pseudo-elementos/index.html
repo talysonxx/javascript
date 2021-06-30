@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p::selection{
+            background-color: yellow;
+            color: black;
+        }
+        p::first-line{
+            color: red;
+        }
+        p::first-letter{
+            color: blue;
+            font-size: 4rem;
+        }
+        li{
+           list-style: none;
+           padding: 10px;
+        }
+        li::before{
+           content: '';
+           /* color: yellow ; */
+           width: 20px;
+           height: 20px;
+           display: inline-block;
+           background-image: url(https://mangalivre.com.br/wp-content/uploads/2021/04/EzOs6UjVgAUJYUz-PKRTVX.jpeg);
+           background-repeat: no-repeat;
+           background-size: cover;
+           background-position: center;
+           margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Título</h1>
+    <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores unde facilis ad sequi minima aperiam et molestias aspernatur, nam quasi tempore quas illo ab veritatis magni, aliquid magnam a eaque.
+    </p>
+
+    <ul>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+    </ul>
+</body>
+</html>

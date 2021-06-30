@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+</head>
+<body>
+    <canvas id="tela" width="500" height="500"></canvas>
+
+    <script>
+        let tela = window.document.getElementById('tela')
+        let ctx = tela.getContext('2d')
+
+        let circle = {
+            x: 250,
+            y: 250,
+            raio: 100,
+            início: 0,
+            fim: 0,
+            antiHorário: true
+        }
+        function drawCircle(c){
+            ctx.beginPath()
+            ctx.fillStyle = 'antiquewhite'
+            ctx.fillRect(0, 0, 500, 500)
+
+            ctx.beginPath()
+            ctx.strokeStyle = 'red'
+            ctx.lineWidth = 2    
+            ctx.fillStyle = 'blue'
+            // ctx.arc(x, y, raio, inicio, fim)
+            ctx.arc(c.x, c.y, c.raio, c.início, c.fim, c.antiHorário)
+            ctx.fill()
+            ctx.stroke()
+            console.log(`x = ${c.x}, y = ${c.y}, raio = ${c.raio}, inicio = ${c.início}, fim = ${c.fim}`)
+        }
+        
+        setInterval(function(){
+            if(circle.fim < 2 * Math.PI){
+                circle.fim += 0.5
+                circle.x += 3
+                circle.raio -= 0.5
+            }
+            drawCircle(circle)
+        }, 100)
+        window.console.log(Math.PI * 2)
+    </script>
+</body>
+</html>

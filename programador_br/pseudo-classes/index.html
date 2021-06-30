@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li{
+            list-style: none;
+        }
+        li:first-child{
+            /* apenas o primeiro filho do elemento pai fica assim */
+            color: red;
+        }
+        li:first-of-type{
+            /* apenas o primeiro filho do elemento pai que seja li */
+            color: red;
+        }
+        li:nth-child(2){
+            /* segundo filho */
+            color: blue;
+        }
+        li:nth-of-type(even){
+            /* even pego só os pares */
+            /* segundo filho somente das tags li */
+            color: darkgoldenrod;
+        }
+        li:nth-last-child(2){
+            /* o último de trás pra frente */
+            color: deeppink;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <h1>bolsonaro</h1>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+    </ul>
+</body>
+</html>
