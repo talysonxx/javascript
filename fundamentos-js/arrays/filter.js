@@ -16,8 +16,12 @@ const números = [3, 2, 10, 9]
     //return número % 2 == 0
 })*/
 
-const multiplosDeDois = números.filter(números => números % 3 == 0)
+const multiplosDeDois = números.filter(números => números % 2 == 0)
 console.log(números, 'multiplos de 2', multiplosDeDois)
 
 const arrayMapAndFilter = números.filter(número => número % 2 == 0 ).map(número => número * 10)
 console.log(arrayMapAndFilter)
+
+// a mesma coisa do de cima
+const vezes10 = multiplosDeDois.map(numero => numero * 10)
+console.log(vezes10)
