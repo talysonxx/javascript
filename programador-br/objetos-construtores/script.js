@@ -1,6 +1,6 @@
 function criarAluno(nome, n1, n2) {
     return {
-        nome: nome, 
+        nome,
         nota1: n1, 
         nota2: n2,
         media: function() {
