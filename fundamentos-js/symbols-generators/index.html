@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symbols</title>
+</head>
+<body>
+    <script>
+        // // symbol é um identificador único
+        // const idUnico = Symbol('Olá')
+        // const idUnico2 = Symbol('Olá')
+        // window.console.log(idUnico === idUnico2)
+
+        // // propriedades privadas
+        // const obj = {
+        //     [idUnico]: 'Olá' 
+        // }
+        // console.log(obj, Object.keys(obj), Object.getOwnPropertySymbols(obj))
+
+
+        // generators
+        function hello(){
+            console.log('Olá')
+            console.log('Vindo de uma')
+            console.log('Função!')
+            // digamos que eu queira uma pausa a cada console.log
+        }
+        hello()
+        console.log('=============')
+        function* helloGenerator(){
+            console.log('Olá')
+            yield 1
+            // o valor do yield é mostrado no value
+            console.log('Vindo de uma')
+            const value = yield 2
+            console.log(value)
+        }
+        const it = helloGenerator()
+        console.log(it.next())
+        console.log(it.next())
+        console.log(it.next('Bom dia'))
+
+        // gerando números infinitos
+        console.log('=============')
+        function* numerosInfinitos(){
+            let numero = 0
+            while (true){
+                yield numero
+                numero++
+            }
+        }
+        const it2 = numerosInfinitos()
+        console.log(it2.next())
+        console.log(it2.next())
+        console.log(it2.next())
+    </script>
+</body>
+</html>
