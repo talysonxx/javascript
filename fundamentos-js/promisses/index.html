@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promisses - JS raiz</title>
+</head>
+<body>
+    <script>
+        // console.log('Primeiro')
+        // setTimeout(() => console.log('Segundo'), 0)
+        // console.log('Terceiro')
+
+
+        /*
+        uma promisse tem quatro estados: 
+        - pendente - sem resultado
+        - realizada - sucesso
+        - rejeitado - falha
+        - estabelecida - resultado final
+        */
+
+        // uma promise já resolvida
+        const jaRealizada = () => Promise.resolve('Talyson')
+        // método de uma promise já resolvida: then excuta uma função assim que a promisse é resolvida
+        jaRealizada().then(nome => console.log('Promise resolvida, caro', nome))
+
+        // uma promise já rejeitada
+        const jaRejeitada = () => Promise.reject('Promise rejected')
+        // método de uma promise rejeitada: cath, ele trata o erro
+        jaRejeitada().catch(promiseError => console.log(promiseError))
+
+        function promiseTrabalhada(){
+            return new Promise((resolve, reject) => setTimeout(() => resolve('Talyson André'), 1000))
+        }
+        promiseTrabalhada().then(message => console.log(message)) 
+        
+        // fazendo requisição de um CEP
+        // retorna uma promise resolvida
+        window.fetch('https://viacep.com.br/ws/68456335/json/').then((data) => data.json().then((data) => console.log(data)))
+
+        window.fetch('https://viacep.com.br/ws/68456335/json/').then(data => data.json()).then((endereco => console.log(JSON.stringify(endereco))))
+
+        const cepPromise = () => new Promise((resolve, reject) => resolve('68456335'))
+        cepPromise().then((meuCep) => window.fetch('https://viacep.com.br/ws/'+meuCep+'/json/').then(data => data.json()).then(data => console.log(data)).catch(() => console.log('Ocorreu um erro')))
+
+
+
+        const cepPromise2 = () => new Promise((resolve, reject) => resolve('68456335'))
+
+        cepPromise2().then(function(cep){
+            return window.fetch('https://viacep.com.br/ws/'+cep+'/json/').
+            then(function(data){
+                return data.json()
+            }).
+            then(function(){
+                return jaRejeitada()
+            }).then(function(endereco){
+                console.log(endereco)
+            }).catch(function(){
+                console.log('houve algum erro durante a requisição')
+            })
+        })
+    </script>
+</body>
+</html>
