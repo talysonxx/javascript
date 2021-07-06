@@ -38,16 +38,16 @@
         
         // fazendo requisição de um CEP
         // retorna uma promise resolvida
-        window.fetch('https://viacep.com.br/ws/68456335/json/').then((data) => data.json().then((data) => console.log(data)))
+        window.fetch('https://viacep.com.br/ws/70316102/json/').then((data) => data.json().then((data) => console.log(data)))
 
-        window.fetch('https://viacep.com.br/ws/68456335/json/').then(data => data.json()).then((endereco => console.log(JSON.stringify(endereco))))
+        window.fetch('https://viacep.com.br/ws/70316102/json/').then(data => data.json()).then((endereco => console.log(JSON.stringify(endereco))))
 
-        const cepPromise = () => new Promise((resolve, reject) => resolve('68456335'))
+        const cepPromise = () => new Promise((resolve, reject) => resolve('70316102'))
         cepPromise().then((meuCep) => window.fetch('https://viacep.com.br/ws/'+meuCep+'/json/').then(data => data.json()).then(data => console.log(data)).catch(() => console.log('Ocorreu um erro')))
 
 
 
-        const cepPromise2 = () => new Promise((resolve, reject) => resolve('68456335'))
+        const cepPromise2 = () => new Promise((resolve, reject) => resolve('70316102'))
 
         cepPromise2().then(function(cep){
             return window.fetch('https://viacep.com.br/ws/'+cep+'/json/').
