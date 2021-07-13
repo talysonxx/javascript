@@ -5,6 +5,7 @@ let contexto = screen.getContext('2d')
 // contexto.strokeStyle = 'blue'
 // contexto.moveTo(0, 0)
 // widht height
+// x / y
 // contexto.lineTo(250, 250)
 // contexto.lineTo(500, 0)
 // contexto.stroke()
@@ -13,6 +14,7 @@ let contexto = screen.getContext('2d')
 
 // // left right largura altura
 // contexto.fillStyle = 'blue'
+// x y altura largura
 // contexto.fillRect(50, 30, 200, 300)
 
 // contexto.rect(10, 10, 100, 200)

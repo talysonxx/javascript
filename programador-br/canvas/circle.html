@@ -22,6 +22,7 @@
             antiHorário: true
         }
         function drawCircle(c){
+            ctx.clearRect(0, 0, 500, 500)
             ctx.beginPath()
             ctx.fillStyle = 'antiquewhite'
             ctx.fillRect(0, 0, 500, 500)
@@ -41,11 +42,15 @@
             if(circle.fim < 2 * Math.PI){
                 circle.fim += 0.5
                 circle.x += 3
-                circle.raio -= 0.5
+                circle.raio -= 5
             }
             drawCircle(circle)
+            // vai recarregar a página sempre que o círculo for completado
+            // if(circle.fim >= 2 * Math.PI) window.location.reload()
         }, 100)
         window.console.log(Math.PI * 2)
+        // mostra a localização atual da página
+        // window.alert(window.location)
     </script>
 </body>
 </html>

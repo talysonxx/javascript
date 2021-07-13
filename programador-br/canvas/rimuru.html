@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Test</title>
+    <style>
+        canvas{
+            background-color: antiquewhite;
+            margin: 50px auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="screen" width="500px" height="500px"></canvas>
+    <script>
+        let canvas = window.document.querySelector('canvas#screen')
+        let context = canvas.getContext('2d')
+
+        let img = new Image()
+        img.src = 'rimuru.png'
+        let x = 1
+        let y = 1
+        img.onload = carregarImg
+        
+        function carregarImg(){
+            context.clearRect(0, 0, 500, 500)
+            context.drawImage(this, x, y, this.naturalWidth / 5, this.naturalHeight / 5)
+        }
+
+        canvas.addEventListener('mousemove', desenharImg)
+
+        function desenharImg(event){
+            x = event.offsetX
+            y = event.offsetY
+            carregarImg()
+        }
+    </script>
+</body>
+</html>
