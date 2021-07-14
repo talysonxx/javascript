@@ -69,7 +69,7 @@
         cepPromise2().then(pegaCEP).then(transoformaJson).then(imprimiEndereco)
 
 
-        // não há a necessidade de passaar um parâmetro para a função, ela já joga automaticamente, ocorreu como se promiseTEST().then(imprimirAnime('Alicization'))
+        // não há a necessidade de passaar um parâmetro para a função, ela já joga automaticamente, ocorreu como se promiseTest().then(imprimirAnime('Alicization'))
         const promiseTest = () => new Promise((resolve, reject) => reject('Alicization'))
         const imprimirAnime = nome => console.log('Tudo certo,', nome)
         const continuacao = () => console.log('Ainda tudo certo')
