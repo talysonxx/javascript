@@ -75,3 +75,28 @@ async function getUserPosts(userId){
     // console.log(result)
     // com arrow function não dá pra especionar o valor no devtools com breakpoint
 }())
+
+
+// tratamento de erros
+// se o erro for na promise, ele pula o cath()
+try{
+    // promise
+    window.fetch('https://jsonplaceholder.typicode.com/users').then(function(data){
+    return JSON.parse(data)
+    })
+    .catch(error => console.log('問題があるようだ⋮ erro na promise', error))
+}catch(e){
+    console.log('Error', e)
+}finally{
+    console.log('終わり')
+}
+
+const promessa = async () => new Promise((resolve, reject) => setTimeout(() => resolve('日本人とブラジル人')), 5000)
+
+promessa().then(console.log)
+promessa().then(function(resolvida){
+    console.log(resolvida)
+})
+promessa().then((e) => console.log(e))
+promessa().catch((e) => console.log('こっちこっちこっちこっち', e))
+promessa().finally(() => console.log('終わったよ！'))
