@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pr-be">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer>
+        try{
+            console.log(name);
+            const name = 'talyson';
+        }catch(error){
+            console.log(error);
+        }finally{
+            console.log('keep coding!');
+        }
+
+        // erro customizado
+        try{
+            const age = 12;
+            console.log(age);
+            const customError = Erro('ocorreu um erro');
+            throw customError;
+        }catch(error){
+            console.log('outro erro:', error);
+        }finally{
+            console.log('fim')
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>
