@@ -9,13 +9,18 @@
         .container{
             color: white;
             display: grid;
-            /* grid-template-rows: auto auto;
-            grid-template-columns: 1fr 3fr 1fr; */
-            /* fr = fração; 3fr = três vezes o tamanho das pontas */
-            grid-template: auto auto auto / 33.3% 33.3% auto;
+            background-color: gray;
+            padding: 10px;
+            /* definir linhas (duas linhas automáticas) */
+            grid-template-rows: auto auto;
+            /* definir colunas (três culunas automáticas) */
+            grid-template-columns: auto auto auto;
+            /* fr próprio pra grid: fr (fração) */
+            /* primeiro linha depois colunas */
+            /* grid-template: auto auto / auto auto auto; */
         }
         .r1{
-            background-color: red;
+            background-color: rgb(39, 76, 79);
         }
         .r2{
             background-color: blue;
