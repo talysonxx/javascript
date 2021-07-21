@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer type="desable">
+        console.warn('Aviso em amarelo')
+        console.error('Erro em vermelho')
+        console.trace() // mostra onde o console está sendo executado
+
+        // grupo de mensagens
+        console.group('Meu grupo')
+        console.log('msg1')
+        console.log('msg2')
+        console.groupEnd('Meu grupo')
+
+        console.assert(1 === 10, 'condição falsa')
+
+        console.log('%c mensagem aleatória', 'color: lightblue; font-size: 33px; font-family: arial')
+    </script>
+
+</head>
+<body>
+    <h1>tratamento de erros</h1>
+    <p>contador: <span id="contador">0</span></p>
+    <button id="botao-adiciona" onclick="adicionar()">Adicionar</button>
+    <button id="botao-tira" onclick="tirar()">Tirar</button>
+    <script>
+        let span = window.document.querySelector('span#contador')
+        let contador = 0
+        function adicionar(){
+            contador++
+            span.innerHTML = contador
+        }
+        function tirar(){
+            contador--
+            span.innerHTML = contador
+        }
+    </script>
+</body>
+</html>
