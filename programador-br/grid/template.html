@@ -10,14 +10,18 @@
             color: white;
             display: grid;
             background-color: gray;
-            padding: 10px;
+            /* padding: 10px; */
             /* definir linhas (duas linhas automáticas) */
-            grid-template-rows: auto auto;
+            grid-template-rows: auto auto auto;
             /* definir colunas (três culunas automáticas) */
-            grid-template-columns: auto auto auto;
+            grid-template-columns: auto auto auto auto;
             /* fr próprio pra grid: fr (fração) */
             /* primeiro linha depois colunas */
             /* grid-template: auto auto / auto auto auto; */
+            grid-template-areas: 
+                                "a1 a1 a4 a4"
+                                "a2 a2 a2 a3"
+                                "a5 a6 a6 a6";
         }
         .r1{
             background-color: rgb(39, 76, 79);
@@ -28,16 +32,34 @@
         .r3{
             background-color: green;
         }
+        .item-1{
+            grid-area: a1;
+        }
+        .item-2{
+            grid-area: a2;
+        }
+        .item-3{
+            grid-area: a3;
+        }
+        .item-4{
+            grid-area: a4;
+        }
+        .item-5{
+            grid-area: a5;
+        }
+        .item-6{
+            grid-area: a6;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="rect r1">1</div>
-        <div class="rect r2">2</div>
-        <div class="rect r3">3</div>
-        <div class="rect r1">4</div>
-        <div class="rect r2">5</div>
-        <div class="rect r3">6</div>
+        <div class="rect r1 item-1">1</div>
+        <div class="rect r2 item-2">2</div>
+        <div class="rect r3 item-3">3</div>
+        <div class="rect r1 item-4">4</div>
+        <div class="rect r2 item-5">5</div>
+        <div class="rect r3 item-6">6</div>
     </div>
 </body>
 </html>
