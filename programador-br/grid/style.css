@@ -6,19 +6,21 @@
 .container{
     background-color: blue;
     padding: 1.5%;
-    height: 2000px;
     display: grid;
-    grid-template-rows: auto auto auto auto;
-    grid-template-columns: auto auto;
-    /* row-gap: 10px; */
-    column-gap: 0;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto auto auto;
+    row-gap: 20px;
+    column-gap: 20px;
     /* primeiro row depois column */
     /* gap: 10px 0; */
     overflow-y: auto;
     /* vertical */
-    justify-items: center;
+    /* justify-items: center; */
     /* horizontal */
-    align-items: center;
+    /* align-items: center; */
+
+    align-content: center;
+    justify-content: center;
 }
 .card{
     border: 1px solid  red;
