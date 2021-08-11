@@ -6,14 +6,19 @@
 .container{
     background-color: blue;
     padding: 1.5%;
+    height: 2000px;
     display: grid;
     grid-template-rows: auto auto auto auto;
-    grid-template-columns: 18% 18%;
-    row-gap: 10px;
+    grid-template-columns: auto auto;
+    /* row-gap: 10px; */
     column-gap: 0;
     /* primeiro row depois column */
     /* gap: 10px 0; */
     overflow-y: auto;
+    /* vertical */
+    justify-items: center;
+    /* horizontal */
+    align-items: center;
 }
 .card{
     border: 1px solid  red;
