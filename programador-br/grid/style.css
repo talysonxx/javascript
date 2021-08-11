@@ -6,6 +6,14 @@
 .container{
     background-color: blue;
     padding: 1.5%;
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: 18% 18%;
+    row-gap: 10px;
+    column-gap: 0;
+    /* primeiro row depois column */
+    /* gap: 10px 0; */
+    overflow-y: auto;
 }
 .card{
     border: 1px solid  red;
@@ -13,6 +21,7 @@
     background-image: url('ruka.jpg');
     width: 200px;
     height: 200px;
-    background-position: center;
-    background-attachment: local;
+    /* background-position: center;
+    background-attachment: local; */
+    background-size: cover;
 }

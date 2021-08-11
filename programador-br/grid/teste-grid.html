@@ -8,13 +8,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="card card-1">1</div>
-        <div class="card card-2">2</div>
-        <div class="card card-3">3</div>
-        <div class="card card-4">4</div>
-        <div class="card card-5">5</div>
-        <div class="card card-6">6</div>
-    </div>
+    <div class="container"></div>
+
+    <script>
+        const container = window.document.querySelector('div.container')
+        for (let cont = 1; cont <= 6; cont++) {
+            const div = window.document.createElement('div')
+            div.setAttribute('class', `card card-${cont}`)
+            container.appendChild(div)
+        }
+    </script>
 </body>
 </html>
