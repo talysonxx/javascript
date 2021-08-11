@@ -21,6 +21,9 @@
 
     align-content: center;
     justify-content: center;
+    color: cyan;
+    font-size: 40px;
+    font-weight: bolder;
 }
 .card{
     border: 1px solid  red;

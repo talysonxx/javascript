@@ -15,6 +15,7 @@
         for (let cont = 1; cont <= 6; cont++) {
             const div = window.document.createElement('div')
             div.setAttribute('class', `card card-${cont}`)
+            div.innerText = `${cont}`
             container.appendChild(div)
         }
     </script>
