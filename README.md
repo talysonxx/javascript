@@ -1,9 +1,14 @@
-# Exercícios com javascript (e html-css)
-# Pasta com alguns exercícios e conteúdo sobre javascript
+# # Pasta com conteúdos de JavaScript
 
-#### Esse repositório possui apenas alguns exercícios simples para fixar e treinar alguns conceitos de js junto com html-css
+* ### Principais fontes de conteúdo
 
-###### Meus **contatos**
-* meu instagram: [@talysonxx](https://instagram.com/talysonxx)
-* meu email: talysonoficial12@gmail.com
-* meu linkedIn: [Talyson André](https://www.linkedin.com/in/talyson-andré-101897170/)
+  * [Programador a Bordo](https://www.youtube.com/watch?v=vrSEt5J4q2Y&list=PLbA-jMwv0cuWbas947cygrzfzHIc7esmp)
+  * [Curso em Vídeo ](https://www.youtube.com/watch?v=BXqUH86F-kA&list=PLntvgXM11X6pi7mW0O4ZmfUI1xDSIbmTm) (Gustavo Guanabara)
+  * [Programador BR](https://www.youtube.com/c/Programadorbr)
+
+  ###### Meus **contatos**
+
+    * meu instagram: [@talysonxx](https://instagram.com/talysonxx)
+    * meu email: talysonoficial12@gmail.com
+    * meu linkedIn:  [Talyson André](https://www.linkedin.com/in/talyson-andré-101897170/)
+
