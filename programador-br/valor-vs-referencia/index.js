@@ -25,6 +25,17 @@ let alunoA = {nome: 'talyson', idade: 18}
 
 // valor
 // let alunoB = Object.assign({}, alunoA)
-let alunoB = {...alunoA}
-alunoB.idade = 30
+// let alunoB = {...alunoA}
+// alunoB.idade = 30
+let {...alunoB} = alunoA
+alunoB.nome = 'Lula'
 console.log({alunoA, alunoB})
+
+turma = {
+  nome: 'sim',
+  matricula: 122,
+  idade: 12,
+  moradia: 'poor'
+}
+let {nome, matricula, ...resto} = turma
+console.log(nome, matricula, resto)
